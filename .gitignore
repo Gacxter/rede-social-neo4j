@@ -1,0 +1,213 @@
+# =============================================================
+# .gitignore — Neo4j Social Network
+# =============================================================
+
+# -------------------------------------------------------------
+# Neo4j — Arquivos locais de instância e dados
+# -------------------------------------------------------------
+
+# Diretório de dados do Neo4j Desktop / Neo4j local
+data/
+databases/
+transactions/
+certificates/
+logs/
+import/
+plugins/
+run/
+
+# Arquivos de configuração local com credenciais
+neo4j.conf
+*.conf
+
+# Dumps e backups de banco
+*.dump
+*.backup
+*.db
+
+# Arquivos de lock do Neo4j
+*.id
+store_lock
+
+# -------------------------------------------------------------
+# Credenciais e variáveis de ambiente
+# -------------------------------------------------------------
+
+# Variáveis de ambiente — NUNCA versionar credenciais
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+*.env
+
+# Arquivos com URI, usuário e senha do Aura ou instância local
+aura_credentials.txt
+credentials.txt
+connection.txt
+secrets.*
+
+# -------------------------------------------------------------
+# Sistema Operacional — Windows
+# -------------------------------------------------------------
+
+# Arquivos de sistema Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+*.stackdump
+
+# Windows shortcuts
+*.url
+
+# -------------------------------------------------------------
+# Sistema Operacional — macOS (caso colaboradores usem Mac)
+# -------------------------------------------------------------
+
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# -------------------------------------------------------------
+# Sistema Operacional — Linux
+# -------------------------------------------------------------
+
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# -------------------------------------------------------------
+# Editores e IDEs
+# -------------------------------------------------------------
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# IntelliJ / DataGrip / Neo4j Desktop IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+Session.vim
+.netrwhist
+
+# Emacs
+\#*\#
+.\#*
+*.elc
+
+# -------------------------------------------------------------
+# Node.js (caso use scripts JS para automação ou APOC)
+# -------------------------------------------------------------
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.npm
+.node_repl_history
+
+# -------------------------------------------------------------
+# Python (caso use scripts Python para carga de dados)
+# -------------------------------------------------------------
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+ENV/
+pip-log.txt
+pip-delete-this-directory.txt
+*.egg-info/
+dist/
+build/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+
+# -------------------------------------------------------------
+# Arquivos temporários e de log gerais
+# -------------------------------------------------------------
+
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.orig
+*.cache
+temp/
+tmp/
+cache/
+
+# -------------------------------------------------------------
+# Arquivos grandes de dados — usar Git LFS se necessário
+# -------------------------------------------------------------
+
+# CSVs de dados brutos (podem ser grandes — use Git LFS)
+# Descomente se quiser ignorar CSVs:
+# *.csv
+
+# Arquivos de exportação grandes
+*.json.gz
+*.csv.gz
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# -------------------------------------------------------------
+# Screenshots — manter apenas subpastas organizadas
+# -------------------------------------------------------------
+
+# Ignorar screenshots avulsas na raiz da pasta
+screenshots/*.png
+screenshots/*.jpg
+screenshots/*.jpeg
+screenshots/*.gif
+screenshots/*.webp
+
+# Mas NÃO ignorar as subpastas organizadas:
+!screenshots/Queries_Screenshots/
+!screenshots/Queries_Lists_ScreenShots/
+!screenshots/.gitkeep
+
+# -------------------------------------------------------------
+# Arquivos gerados automaticamente
+# -------------------------------------------------------------
+
+# Relatórios gerados
+reports/
+output/
+generated/
